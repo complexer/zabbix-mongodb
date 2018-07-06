@@ -15,8 +15,8 @@ from sys import exit
 class MongoDB(object):
     """main script class"""
     # pylint: disable=too-many-instance-attributes
-    def __init__(self):
-        self.mongo_host = "127.0.0.1"
+    def __init__(self,host):
+        self.mongo_host = host
         self.mongo_port = 27017
         self.mongo_db = ["admin", ]
         self.mongo_user = None
@@ -237,7 +237,8 @@ class MongoDB(object):
             self.__conn.close()
 
 if __name__ == '__main__':
-    mongodb = MongoDB()
+    host = sys.argv[1];
+    mongodb = MongoDB(host)
     mongodb.get_db_names()
     mongodb.get_mongo_db_lld()
     mongodb.get_oplog()
