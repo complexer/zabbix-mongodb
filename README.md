@@ -5,8 +5,8 @@
 1. Import the mongodb template to zabbix and link it to the zabbix mongodb host.
 2. Copy the scripts to mongodb host in /usr/local/bin .
 3. Copy mongodb zabbix agent configuration to /etc/zabbix-agent/zabbix_agentd.d and restart zabbix agent.
-4. python2.7+,pip(pymongo).
-ps. Check whether your zabbix configure file contains "RefreshActiveChecks".This template is zabbix agent (active).
+4. python2.7+,pip(pymongo).  
+ps. Check whether your zabbix configure file contains "RefreshActiveChecks".This template is zabbix agent (active).  
 Note:
 - Zabbix sender uses zabbix agent configuration to send the metrics, please check the hostname is set in the zabbix agent config /etc/zabbix/zabbix_agentd.conf, by default the hostname may be commented out.
 
